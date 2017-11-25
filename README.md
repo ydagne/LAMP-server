@@ -1,4 +1,4 @@
-# How to setup LAMP server on CentOS and Install WordPress
+## A quick guide for setting up a CentOS-based LAMP stack webserver powered by WordPress
 
 This is a quick guide for setting up LAMP stack and installing  [Wordpress](https://wordpress.com/) on a [CentOS](https://www.centos.org/) machine. In order to follow this guide, you need to have access to CentOS machine either locally or remotely through ssh connection.
 
