@@ -7,7 +7,7 @@ This is a quick guide for setting up LAMP stack and installing  [Wordpress](http
 ## STEP 1: INITIAL SERVER SETUP
 After a fresh install, it is recommended to install updates.
     
-    $ sudo yum update'
+    $ sudo yum update
 
 You may want to change the root password. To do that run the following command.
     
@@ -51,7 +51,7 @@ Enable apache to start on boot
 
 Configuration file for Apache is located at _/etc/httpd/conf/httpd.conf_. Open this file and search for _"DocumentRoot"_. By default, you will see the following
 
-    DocumentRoot "/var/www/html/" ''
+    DocumentRoot "/var/www/html/"
 
 This means, Apache will serve websites that are hosted in _/var/www/html_ directory. By default, if Apache doesn't find an index file (eg. index.html), it will show directory listing of all files in _/var/www/html_ directory. This will expose all the files in this director to the public. In order to disable directory listing, open _/etc/httpd/conf/httpd.conf_ file and within `<Directory "/var/www/html">` directive, remove `"Indexes"` from the list of `Options`. Eg. If you find something like the following
     
@@ -60,6 +60,7 @@ This means, Apache will serve websites that are hosted in _/var/www/html_ direct
 then change it to
 
     Options FollowSymLinks
+
 i.e remove `Indexes`. You need to restart apache in order to apply configuration changes
 
     # systemctl restart httpd.service
@@ -94,11 +95,11 @@ First, create database for wordpress. To do that, login to mysql server as a roo
     
     # mysql -u root -p
 
-Then create a database. For example, the following command creates a database called <em>wp</em>
+Then create a database. For example, the following command creates a database called **wp**
 
     > CREATE DATABASE wp;
    
-Then create a user account which Wordpress will use to access the database. For example, the following command creates an account with username _wpUser_ and password _wpPass123_
+Then create a user account which Wordpress will use to access the database. For example, the following command creates an account with username **wpUser** and password **wpPass123**
 
     > CREATE USER wpUser@localhost IDENTIFIED BY 'wpPass123';
    
